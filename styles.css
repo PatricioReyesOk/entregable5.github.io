@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+.container {
+    position: relative;
+    margin: 10% auto;
+    text-align: center;
+    max-width:60%;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+    padding: 50px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 15px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin: 15px;
+  }
+
+  .action-btn {
+    border: none;
+    font-size: 1.25rem;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 30px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.action-btn:hover , .submit-form-contacto:hover{
+  scale: 1.10;
+    color: white;
+}
+
+
+
+#modal::backdrop {
+    background-color: #00000068;
+    backdrop-filter: blur(40px);
+    }
+  
+.modal-section {
+    display: fixed;
+    }
+  
+#modal {
+    display: absolute;
+    align-items: center;
+    width: 50%;
+    position: fixed;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.529);
+    backdrop-filter: blur(20px);
+    margin: 5% 25%;
+    }
+  
+
+  
+.button-form{
+      text-align: right;
+    }
+  
+#btn-cerrar-modal {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    cursor: pointer; 
+   }
+  
+  
+   input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #111111;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+  }
+  
+.styled-input {
+    font-weight: bold;
+    float: left;
+    width: 48%;
+    margin: 0.75rem 0;
+    position: relative;
+    border-radius: 30px;
+  }
+  
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+  }
+  
+.styled-input label {
+    color: #111111;
+    padding: 0.5rem 15px 0.5rem 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+  }
+  
+.styled-input.wide { 
+    width: 100%;
+    max-width: 100%;
+  }
+  
+input,
+textarea {
+    padding: 15px;
+    border: 0;
+    width: 100%;
+    font-size: 1.25rem;
+    background-color: white;
+    color: #111111;
+    border-radius: 30px;
+  }
+  
+input:focus,
+textarea:focus { outline: 0; }
+  
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+  }
+  
+textarea {
+    width: 100%;
+    min-height: 12em;
+  }
+  
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+  }
+  
+@media (max-width: 768px) {
+    .submit-btn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }
+  }
+  
+
+  
+.form-contacto {
+    margin: 10px 20px;
+    text-align: center;
+    }
+  
+.submit-form-contacto {
+  
+      height: 50px;
+      width: 60%;
+      border: none;
+      border-radius: 30px;
+      background-color: blueviolet;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+.h1-form-contacto {
+      font-size: 2rem;
+    }
+  
+.p-form-contacto {
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+
+    .col-xs-77 {
+      margin: 30px;
+      
+    }
+
+
+.checkbox-wrapper {
+  position: relative;
+  display: inline-block;
+  color: #111111;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-wrapper label {
+  display: inline-block;
+  bottom: 20px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid blueviolet;
+  border-radius: 4px;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + label {
+  background-color: blueviolet;
+  border-color: blueviolet;
+}
+
+.checkbox-wrapper span {
+  margin-left: 30px; 
+}

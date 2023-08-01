@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Hola!</h1>
+        <p>Este es mi entregable numero 5 de "Formularios html"</p>
+        <button id="btn-abrir-modal" class="action-btn">Click aqui para llenar el formulario</button>
+    </div>
+    
+
+    <section class="modal-section">
+
+        <dialog id="modal">
+            <div class="button-form"><button id="btn-cerrar-modal"><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></button></div>
+                <div class="form-contacto">
+                    <h1 class="h1-form-contacto">Formulario HTML</h1>
+                    <p class="p-form-contacto">Este es un ejemplo de formularios de contacto</p>
+                        <form onsubmit="mostrarDialogo()" action="enviar-formulario.php" method="POST" class="campos">   
+                            <div class="row input-container">
+                                <div class="col-xs-12">
+                                    <div class="styled-input wide">
+                                        <input id="nombre" name="nombre" type="text" required />
+                                        <label for="nombre">Nombre:</label> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="styled-input">
+                                        <input type="email" id="email" name="email" required />
+                                        <label  for="email">Email:</label> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="styled-input" style="float:right;">
+                                        <input type="tel" id="telefono" name="telefono" required />
+                                        <label  for="telefono">Telefono</label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="styled-input wide">
+                                        <textarea id="mensaje" name="mensaje" required></textarea>
+                                        <label  for="mensaje">Mensaje</label>
+                                    </div>
+                                </div>
+                               <div class="col-xs-77">            
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="miCheckbox">
+                                    <label for="miCheckbox"></label>
+                                    <span>Deseo recibir confirmación de correo electronico</span>
+                                  </div>
+                                </div>
+                                <button type="submit" class="submit-form-contacto">Enviar</button>
+                        </div>
+                  </form>
+                </div>                
+        </dialog>
+    </section>
+
+    <script>
+
+const btnAbrirModal =
+document.querySelector("#btn-abrir-modal");
+
+const btnCerrarModal =
+document.querySelector("#btn-cerrar-modal");
+
+const modal =
+document.querySelector("#modal");
+
+
+
+btnAbrirModal.addEventListener("click",()=>{
+    modal.showModal();
+})
+
+btnCerrarModal.addEventListener("click",()=>{
+    modal.close();
+})
+
+
+    </script>
+
+    <script>
+        function mostrarDialogo() {
+
+var dialogo = document.createElement('div');
+dialogo.innerHTML = '<p>Gracias por contactarnos. Nos pondremos comunicaremos lo antes posible.</p>';
+dialogo.style.border = '1px solid black';
+dialogo.style.padding = '10px';
+dialogo.style.backgroundColor = '#f7f7f7';
+dialogo.style.position = 'fixed';
+dialogo.style.top = '50%';
+dialogo.style.left = '50%';
+dialogo.style.transform = 'translate(-50%, -50%)';
+dialogo.style.zIndex = '9999';
+
+
+document.body.appendChild(dialogo);
+
+
+setTimeout(function() {
+  document.body.removeChild(dialogo);
+}, 3000);
+
+return false;
+}
+    </script>
+
+    
+</body>
+</html>
